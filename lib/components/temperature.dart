@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Temperature extends StatelessWidget {
-  final String? highTemperature;
-  final String? lowTemperature;
-  const Temperature(this.highTemperature, this.lowTemperature, {Key? key})
+  final String? maxTemp;
+  final String? minTemp;
+  const Temperature(this.maxTemp, this.minTemp, {Key? key})
       : super(key: key);
 
   @override
@@ -14,7 +14,7 @@ class Temperature extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "$highTemperature ℃",
+              "$maxTemp ℃",
               style: const TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
@@ -23,7 +23,7 @@ class Temperature extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             Text(
-              "$lowTemperature ℃",
+              "$minTemp ℃",
               style: const TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
